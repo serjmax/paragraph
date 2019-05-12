@@ -5,7 +5,8 @@
 1. Добавляет свойство, в котором задаётся ширина пробелов;
 1. Добавляет в проект стороннию библиотеку типограф.
 
-## 1. Межсловесные переносы и пробелы
+## 1. Параграф
+Добавляет межсловесные переносы. Управляет шириной межсловесных пробелов
 В элемент `body` добавляем css свойства для межсловесных переносов и задания межсловесного расстояния.
 ```css
 body{
@@ -56,41 +57,30 @@ ___
 </script>
 ```
 
-## 3. JSON анимация
+## 3. Lottie-web
+Библиотека lottie-web для JSON анимации
 
-Подключаем библиотеку bodymovin (lottie-web)
-https://www.npmjs.com/package/lottie-web
-
+Подключаем библиотеку https://www.npmjs.com/package/lottie-web
 
 ```js
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.2/lottie_svg.min.js"></script>
 ```
 
-Создаем объект и вставляем в существующий
+Вставляем анимацию из json файла
 
 ```js
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-
-  
-    // Создаем новый элемент
-    // var div = document.createElement('div');
-    // div.className = "alert alert-success";
-    // div.innerHTML = "<strong>Ура!</strong> Вы прочитали это важное сообщение.";
-
     // Получаем элемент в который будем вставлять анимацию
     const container = document.querySelector('[data-id="5cd88dc0f468402c4a53e9e0"]');
 
-    // Вставляем элемент внутрь объекта
-    // element.appendChild(div);
-
-
+    // Вставляем анимацию
     const animation = bodymovin.loadAnimation({
       container: container,
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: 'data.json'
+      path: 'https://raw.githubusercontent.com/serjmax/paragraph/master/data.json'
     });
     
   }, false);
