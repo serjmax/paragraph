@@ -29,3 +29,51 @@ body{
   htmlElement.setAttribute("lang", "ru");
 </script>
 ```
+
+
+<script src="https://raw.githubusercontent.com/typograf/jquery-typograf/gh-pages/autotypograf.vanilla.js"></script>
+
+<!-- Типограф -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  	
+    // Выбираем весь DOM
+  	const htmlElement = document.documentElement.typograf();
+    
+    
+  }, false);
+</script>
+
+
+
+
+
+
+<!-- Вставляем новый объект в нутрь существующего -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  
+    // Создаем новый элемент
+    var div = document.createElement('div');
+    div.className = "alert alert-success";
+    div.innerHTML = "<strong>Ура!</strong> Вы прочитали это важное сообщение.";
+
+    // Находим объект в который будем вставлять новый элемент
+    var element = document.querySelector('[data-id="5cd6a16fe1fa4b788641b49a"]');
+
+    // Вставляем элемент внутрь объекта
+    element.appendChild(div);
+    
+  }, false);
+</script>
+
+<!-- Поиск и замена висящих предлогов через регулярные выражения -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  	
+    // Выбираем весь DOM
+  	const htmlElement = document.documentElement;
+    
+    
+  }, false);
+</script>
