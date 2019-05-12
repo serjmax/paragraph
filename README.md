@@ -12,7 +12,7 @@
 
 В элемент `body` добавляем css свойства для межсловесных переносов и задания межсловесного расстояния.
 ```css
-html{
+body{
   hyphens: auto;
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
