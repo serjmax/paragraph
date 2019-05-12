@@ -58,31 +58,41 @@ ___
 
 ## 3. JSON анимация
 
-<!-- Вставляем новый объект в нутрь существующего -->
+Подключаем библиотеку bodymovin (lottie-web)
+https://www.npmjs.com/package/lottie-web
+
+
+```js
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.2/lottie_svg.min.js"></script>
+```
+
+Создаем объект и вставляем в существующий
+
+```js
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+
   
     // Создаем новый элемент
-    var div = document.createElement('div');
-    div.className = "alert alert-success";
-    div.innerHTML = "<strong>Ура!</strong> Вы прочитали это важное сообщение.";
+    // var div = document.createElement('div');
+    // div.className = "alert alert-success";
+    // div.innerHTML = "<strong>Ура!</strong> Вы прочитали это важное сообщение.";
 
-    // Находим объект в который будем вставлять новый элемент
-    var element = document.querySelector('[data-id="5cd6a16fe1fa4b788641b49a"]');
+    // Получаем элемент в который будем вставлять анимацию
+    const container = document.querySelector('[data-id="5cd88dc0f468402c4a53e9e0"]');
 
     // Вставляем элемент внутрь объекта
-    element.appendChild(div);
-    
-  }, false);
-</script>
+    // element.appendChild(div);
 
-<!-- Поиск и замена висящих предлогов через регулярные выражения -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-  	
-    // Выбираем весь DOM
-  	const htmlElement = document.documentElement;
-    
+
+    const animation = bodymovin.loadAnimation({
+      container: container,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'data.json'
+    });
     
   }, false);
 </script>
+```
