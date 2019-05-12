@@ -30,7 +30,8 @@ body{
 </script>
 ```
 
-
+## 1. Типограф
+В работе...
 <script src="https://raw.githubusercontent.com/typograf/jquery-typograf/gh-pages/autotypograf.vanilla.js"></script>
 
 <!-- Типограф -->
