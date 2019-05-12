@@ -28,6 +28,7 @@ body{
 
 ### Ссылки на сторонние библиотеки
 + https://mnater.github.io/Hyphenopoly/
++ http://mnater.github.io/Hyphenator/
 + https://github.com/bramstein/hypher/
 
 ## 2. Типограф
