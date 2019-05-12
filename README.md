@@ -10,15 +10,7 @@
 
 ## 1. Межсловесные переносы и пробелы
 
-Добавляем в эелемент html атрибут lang="ru":
-```javascript
-<script>
-  const htmlElement = document.documentElement;
-  htmlElement.setAttribute("lang", "ru");
-</script>
-```
-
-В элемент `body` добавляем css свойства для межсловесных переносов и задания межсловесного расстояния:
+В элемент `body` добавляем css свойства для межсловесных переносов и задания межсловесного расстояния.
 ```css
 html{
   hyphens: auto;
@@ -28,4 +20,12 @@ html{
 
   word-spacing: normal;
 }
+```
+
+Добавляем в эелемент `html` атрибут `lang="ru"`.
+```javascript
+<script>
+  const htmlElement = document.documentElement;
+  htmlElement.setAttribute("lang", "ru");
+</script>
 ```
