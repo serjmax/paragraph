@@ -1,7 +1,8 @@
 # Набор библиотек для работы с текстом и анимацией в редимаг
 
-## 1. Параграф
-Добавляет межсловесные переносы. Управляет шириной межсловесных пробелов
+## 1. Межсловные переносы и ширина пробела
+
+### 1.1 Первый вариант
 В элемент `body` добавляем css свойства для межсловесных переносов и задания межсловесного расстояния.
 ```css
 body{
@@ -21,11 +22,37 @@ body{
   htmlElement.setAttribute("lang", "ru");
 </script>
 ```
+### 1.2 Второй вариант
+
+Подключаем библиотеку https://github.com/ytiurin/hyphen и язык
+```javascript
+<script src="https://raw.githack.com/ytiurin/hyphen/master/hyphen.js"></script>
+<script src="https://raw.githack.com/ytiurin/hyphen/master/patterns/ru.js"></script>
+```
+Добавляем код, который находит все элементы с тегом `p` и применяет к ним библиотеку.
+```js
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+  	var hyphenate = createHyphenator(hyphenationPatternsRu);
+
+    // iterate through <p> elements
+    Array.prototype.slice.call(document.getElementsByTagName('p'))
+    .forEach(function (el) {
+      console.log(el)
+      el.innerHTML = hyphenate(el.innerHTML);
+  	});
+  }, false);
+</script>
+```
 
 ### Ссылки на сторонние библиотеки
 + https://mnater.github.io/Hyphenopoly/
 + http://mnater.github.io/Hyphenator/
-+ https://github.com/bramstein/hypher/
++ https://github.com/bramstein/hypher/, паттрены: https://github.com/bramstein/hyphenation-patterns
++ https://github.com/kozachenko/jQuery-Russian-Hyphenation
++ https://github.com/saneef/metalsmith-hyphenate
++ https://github.com/vepasto/finnish-hyphenator
++ https://github.com/jeanbispo/hyphenatorjs Паттерны подгружаются отдельно
 
 ## 2. Типограф
 Помогает автоматически расставить неразрывные пробелы, исправить мелкие опечатки, привести кавычки к правильному виду, заменить дефисы на тире в нужных местах и многое другое.
