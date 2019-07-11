@@ -48,11 +48,6 @@ body{
 ### Ссылки на сторонние библиотеки
 + https://mnater.github.io/Hyphenopoly/
 + http://mnater.github.io/Hyphenator/
-+ https://github.com/bramstein/hypher/, паттрены: https://github.com/bramstein/hyphenation-patterns
-+ https://github.com/kozachenko/jQuery-Russian-Hyphenation
-+ https://github.com/saneef/metalsmith-hyphenate
-+ https://github.com/vepasto/finnish-hyphenator
-+ https://github.com/jeanbispo/hyphenatorjs Паттерны подгружаются отдельно
 
 ## 2. Типограф
 Помогает автоматически расставить неразрывные пробелы, исправить мелкие опечатки, привести кавычки к правильному виду, заменить дефисы на тире в нужных местах и многое другое.
