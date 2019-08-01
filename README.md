@@ -84,6 +84,8 @@ ___
 ```
 
 Вставляем анимацию из json файла
+path: 'https://raw.githubusercontent.com/serjmax/paragraph/master/data.json'
+Домен raw.githubusercontent.com используется для обслуживания необработанных версий файлов, хранящихся в репозиториях GitHub. Если вы перейдете к файлу в GitHub, а затем щелкните ссылку Raw
 
 ```js
 <script>
